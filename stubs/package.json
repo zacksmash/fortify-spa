@@ -1,0 +1,33 @@
+{
+  "private": true,
+  "scripts": {
+    "development": "mix",
+    "dev": "npm run development",
+    "watch": "mix watch",
+    "watch-poll": "mix watch -- --watch-options-poll=1000",
+    "hot": "mix watch --hot",
+    "production": "mix --production",
+    "prod": "npm run production"
+  },
+  "devDependencies": {
+    "@vue/compiler-sfc": "^3.0.5",
+    "browser-sync": "^2.26.13",
+    "browser-sync-webpack-plugin": "^2.2.2",
+    "laravel-mix": "^6.0.6",
+    "postcss": "^8.2.4",
+    "resolve-url-loader": "^3.1.0",
+    "sass": "^1.32.2",
+    "sass-loader": "^8.0.2",
+    "vue-loader": "^16.1.2"
+  },
+  "dependencies": {
+    "@websanova/vue-auth": "^4.1.1",
+    "axios": "^0.21.1",
+    "form-backend-validation": "^2.4.0",
+    "uikit": "^3.5.0",
+    "vue": "^3.0.5",
+    "vue-axios": "^3.2.2",
+    "vue-router": "^4.0.3",
+    "vuex": "^4.0.0-rc.2"
+  }
+}
