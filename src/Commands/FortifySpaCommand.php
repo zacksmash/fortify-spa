@@ -15,7 +15,6 @@ class FortifySpaCommand extends Command
     {
         $this->publishAssets();
         $this->updateWebpackUrl();
-        $this->updateRoutes();
 
         $this->comment('UIkit SPA is now installed.');
         $this->info('Remember to run npm i && npm run dev!');

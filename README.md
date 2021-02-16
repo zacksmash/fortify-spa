@@ -27,6 +27,16 @@ Keep reading to configure FortifySPA.
 <a name="configuration"></a>
 ## Configuration
 
+Update the Sanctum middleware to the `api` middleware group in `app/Http/Kernel.php`
+
+```php
+'api' => [
+    \Laravel\Sanctum\Http\Middleware\EnsureFrontendRequestsAreStateful::class,
+    'throttle:api',
+    \Illuminate\Routing\Middleware\SubstituteBindings::class,
+],
+```
+
 Replace the `handle()` method in the `app/Http/Middleware/RedirectIfAuthenticated.php` file with the following:
 
 ```php
@@ -53,14 +63,13 @@ Update the `app/Providers/RouteServiceProvider.php` with the following:
 public const HOME = '/';
 ```
 
-Update the Sanctum middleware to the `api` middleware group in `app/Http/Kernel.php`
+Add the `FortifyServieProvider` to the providers array in `config/app.php`
 
 ```php
-'api' => [
-    \Laravel\Sanctum\Http\Middleware\EnsureFrontendRequestsAreStateful::class,
-    'throttle:api',
-    \Illuminate\Routing\Middleware\SubstituteBindings::class,
-],
+$providers => [
+    ...
+    App\Providers\FortifyServiceProvider::class,
+]
 ```
 
 Update the `config/cors.php` config file with the following:

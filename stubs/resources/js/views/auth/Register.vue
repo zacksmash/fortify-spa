@@ -100,8 +100,6 @@ export default {
       this.$auth.register({
         data: this.form.data(),
         redirect: {name: 'Dashboard'},
-        remember: true,
-        autoLogin: true,
       })
       .catch(({response}) => {
         this.form = this.form.withErrors(response.data.errors);
