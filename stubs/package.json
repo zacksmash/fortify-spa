@@ -11,8 +11,11 @@
   },
   "devDependencies": {
     "@vue/compiler-sfc": "^3.0.5",
+    "babel-eslint": "^10.1.0",
     "browser-sync": "^2.26.13",
     "browser-sync-webpack-plugin": "^2.2.2",
+    "eslint": "^7.20.0",
+    "eslint-plugin-vue": "^7.6.0",
     "laravel-mix": "^6.0.6",
     "postcss": "^8.2.4",
     "resolve-url-loader": "^3.1.0",

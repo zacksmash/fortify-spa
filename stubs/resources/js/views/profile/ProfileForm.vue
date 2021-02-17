@@ -68,7 +68,10 @@ import FlashMessage from '@/views/components/FlashMessage'
 export default {
   data() {
     return {
-      form: new Form(this.$auth.user(), {
+      form: new Form({
+        name: this.$auth.user()?.name,
+        email: this.$auth.user()?.email
+      }, {
         resetOnSuccess: false
       })
     }

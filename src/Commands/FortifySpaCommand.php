@@ -16,19 +16,19 @@ class FortifySpaCommand extends Command
         $this->publishAssets();
         $this->updateWebpackUrl();
 
-        $this->comment('UIkit SPA is now installed.');
+        $this->comment('Fortify SPA is now installed.');
         $this->info('Remember to run npm i && npm run dev!');
     }
 
     protected function publishAssets()
     {
-        $this->callSilent('vendor:publish', ['--tag' => 'fortify-spa-resources', '--force' => true]);
-
-        $this->callSilent('vendor:publish', ['--provider' => 'Laravel\Fortify\FortifyServiceProvider']);
-
-        $this->callSilent('vendor:publish', ['--provider' => 'Laravel\Sanctum\SanctumServiceProvider']);
-
         File::deleteDirectory(resource_path('css'));
+        File::deleteDirectory(resource_path('js'));
+        File::deleteDirectory(resource_path('views'));
+
+        $this->callSilent('vendor:publish', ['--tag' => 'fortify-spa-resources', '--force' => true]);
+        $this->callSilent('vendor:publish', ['--provider' => 'Laravel\Fortify\FortifyServiceProvider']);
+        $this->callSilent('vendor:publish', ['--provider' => 'Laravel\Sanctum\SanctumServiceProvider']);
     }
 
     protected function updateWebpackUrl()
