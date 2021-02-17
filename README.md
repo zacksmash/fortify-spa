@@ -1,6 +1,6 @@
 # Introduction
 
-FortifySPA is an authentication starter, using Laravel Fortify and Laravel Sanctum to authenticate a VueJS SPA application with vue-auth
+FortifySPA is an authentication starter, using [Laravel Fortify](https://laravel.com/docs/8.x/fortify) and [Laravel Sanctum](https://laravel.com/docs/8.x/sanctum) to authenticate a [VueJS SPA](https://v3.vuejs.org/) with [Vue Auth](https://github.com/websanova/vue-auth)
 
 ---
 
@@ -9,6 +9,8 @@ FortifySPA is an authentication starter, using Laravel Fortify and Laravel Sanct
 
 <a name="installation"></a>
 ## Installation
+
+Install the base package using Composer:
 
 ```bash
 composer require zacksmash/fortify-spa
@@ -20,7 +22,7 @@ Next, you'll need to run the install command:
 php artisan fortify:spa
 ```
 
-This command will publish **FortifySPA's** views and resources.
+This command will publish **FortifySPA's** views and resources, as well as publish Laravel Fortify and Laravel Sanctum's vendor assets.
 
 Keep reading to configure FortifySPA.
 
