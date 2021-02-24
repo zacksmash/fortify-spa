@@ -38,7 +38,6 @@ mix
   // Compile Javascript (ES6)
   .js('resources/js/app.js', 'public/js')
   .vue()
-  .extract()
 
   // Compile Sass
   .sass('resources/scss/app.scss', 'public/css')
