@@ -17,7 +17,6 @@
         }
     ],
     "require": {
-        "php": "^7.4|^8.0",
         "illuminate/contracts": "^8.0",
         "laravel/fortify": "^1.7",
         "laravel/sanctum": "^2.9",
